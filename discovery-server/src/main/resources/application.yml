@@ -1,0 +1,36 @@
+server:
+  context-path: /discoveryServer
+  port: 8761
+  ssl:
+    key-store: /ssl_keystore.keystore
+    key-store-password: changeit
+info:
+  component: Discovery Server
+eureka:
+  instance:
+   hostname: localhost
+   securePort: ${server.port}
+   securePortEnabled: true
+   nonSecurePortEnabled: false
+#   secureVirtualHostName: ${spring.application.name}
+#   homePageUrl: https://${eureka.instance.hostname}:${server.port}/
+#   statusPageUrl: https://${eureka.instance.hostname}:${server.port}/admin/info
+#   metadataMap:
+#     hostname : ${eureka.instance.hostname}
+#     securePort: ${server.port}
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+#    service-url:
+#      defaultZone: https://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    # Set this only for this sample service without which starting the instance will by default wait for the default of 5 mins
+    waitTimeInMsWhenSyncEmpty: 0
+    # Disable self-preservation during development, see https://github.com/Netflix/eureka/wiki/Understanding-Eureka-Peer-to-Peer-Communication
+    enable-self-preservation: false
+    # for the example, set this to zero as we will not have peers to sync up with.
+    # Do not set in a real environment with multi-node eureka clusters.
+    numberRegistrySyncRetries: 0
+#    response-cache-update-interval-ms: 1000
+#    eviction-interval-timer-in-ms: 1
+#    response-cache-auto-expiration-in-seconds: 3
