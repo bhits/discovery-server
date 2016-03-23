@@ -12,6 +12,7 @@ eureka:
    securePort: ${server.port}
    securePortEnabled: true
    nonSecurePortEnabled: false
+#   lease-expiration-duration-in-seconds: 4
 #   secureVirtualHostName: ${spring.application.name}
 #   homePageUrl: https://${eureka.instance.hostname}:${server.port}/
 #   statusPageUrl: https://${eureka.instance.hostname}:${server.port}/admin/info
