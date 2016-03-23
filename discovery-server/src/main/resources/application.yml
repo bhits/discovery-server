@@ -1,5 +1,4 @@
 server:
-  context-path: /discoveryServer
   port: 8761
   ssl:
     key-store: /ssl_keystore.keystore
