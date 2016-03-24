@@ -1,16 +1,15 @@
 server:
   port: 8761
-  ssl:
-    key-store: /ssl_keystore.keystore
-    key-store-password: changeit
+spring.profiles.active: ssl
 info:
   component: Discovery Server
 eureka:
   instance:
    hostname: localhost
+   non-secure-port: ${server.port}
    securePort: ${server.port}
-   securePortEnabled: true
-   nonSecurePortEnabled: false
+   securePortEnabled: false
+   nonSecurePortEnabled: true
 #   lease-expiration-duration-in-seconds: 4
 #   secureVirtualHostName: ${spring.application.name}
 #   homePageUrl: https://${eureka.instance.hostname}:${server.port}/
@@ -34,3 +33,13 @@ eureka:
 #    response-cache-update-interval-ms: 1000
 #    eviction-interval-timer-in-ms: 1
 #    response-cache-auto-expiration-in-seconds: 3
+---
+spring.profiles: ssl
+server:
+  ssl:
+    key-store: /ssl_keystore.keystore
+    key-store-password: changeit
+eureka:
+  instance:
+   securePortEnabled: true
+   nonSecurePortEnabled: false
