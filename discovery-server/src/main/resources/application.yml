@@ -43,3 +43,9 @@ eureka:
   instance:
    securePortEnabled: true
    nonSecurePortEnabled: false
+---
+spring.profiles: docker
+server:
+  ssl:
+      key-store: /java/keystore/mhc.keystore
+      key-store-password: changeit
