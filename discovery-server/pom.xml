@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>gov.samhsa.mhc</groupId>
+	<groupId>gov.samhsa.c2s</groupId>
 	<artifactId>discovery-server</artifactId>
 	<version>0.3.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Service Discovery Server</name>
-	<description>Service Discovery Server for MHC Applications</description>
+	<description>Service Discovery Server for C2S Applications</description>
 
 	<scm>
 		<url>https://github.com/FEISystems/discovery-server.git</url>
