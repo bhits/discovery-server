@@ -1,4 +1,4 @@
-package gov.samhsa.mhc.discoveryserver;
+package gov.samhsa.c2s.discoveryserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
