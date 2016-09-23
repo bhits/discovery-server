@@ -1,6 +1,5 @@
 server:
   port: 8761
-spring.profiles.active: ssl
 info:
   component: Discovery Server
 eureka:
