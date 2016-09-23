@@ -1,5 +1,8 @@
 server:
   port: 8761
+logging:
+  file: /java/C2S_LOGS/discovery-server/discovery-server.log
+  path: /java/C2S_LOGS/discovery-server
 spring.profiles.active: ssl
 info:
   component: Discovery Server
