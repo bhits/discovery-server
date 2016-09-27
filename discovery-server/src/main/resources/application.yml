@@ -1,5 +1,7 @@
 server:
   port: 8761
+logging:
+  file: /java/C2S_LOGS/discovery-server/discovery-server.log
 info:
   component: Discovery Server
 eureka:
