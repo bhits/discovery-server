@@ -44,7 +44,6 @@ eureka:
    nonSecurePortEnabled: false
 ---
 spring.profiles: docker
-server:
-  ssl:
-      key-store: /java/keystore/c2s.keystore
-      key-store-password: changeit
+eureka:
+  instance:
+    prefer-ip-address: true
