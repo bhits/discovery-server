@@ -2,7 +2,6 @@ server:
   port: 8761
 logging:
   file: /java/C2S_LOGS/discovery-server/discovery-server.log
-spring.profiles.active: ssl
 info:
   component: Discovery Server
 eureka:
@@ -47,7 +46,6 @@ eureka:
    nonSecurePortEnabled: false
 ---
 spring.profiles: docker
-server:
-  ssl:
-      key-store: /java/keystore/c2s.keystore
-      key-store-password: changeit
+eureka:
+  instance:
+    prefer-ip-address: true
