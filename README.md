@@ -1,16 +1,11 @@
 # Discovery Server
 
-Discovery Service (Eureka from Netflix) is one of the key tenets of a microservice based architecture. It is a Service Discovery server and client. 
+Discovery Service (Eureka from Netflix) is one of the key tenets of a microservice based architecture. In out current implementation of C2S, the Discovery Server is configured as a Standalone Server. It provides the following:
 
-As a server, it manages:
  + Registry of Consent2Share (C2S) service instances,
  + Provides means for C2S service instances to register, de-register and query instances with the registry,
- + Registry propagation to other Discovery Server Instances (Servers or Clients).
+ + Registry propagation to other C2S microservice (Eureka client) and Discovery Server (Eureka server cluster) instances
 
-As a client, it manages:
- + Register and unregister C2S Service Instances with Discovery Server,
- + Keep alive the connection with Discovery Server,
- + Retrieve and cache discovery information from the Discovery Server.
 
 ## Build
 
@@ -47,6 +42,8 @@ This is a [Spring Boot](https://projects.spring.io/spring-boot/) project and ser
 This API runs with some default configuration that is primarily targeted for development environment. However, [Spring Boot](https://projects.spring.io/spring-boot/) supports several methods to override the default configuration to configure the API for a certain deployment environment.
 
 Please see the [default configuration](discovery-server/src/main/resources/application.yml) for this API as a guidance and override the specific configuration per environment as needed. Also, please refer to [Spring Boot Externalized Configuration](http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html) documentation to see how Spring Boot applies the order to load the properties and [Spring Boot Common Properties](http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html) documentation to see the common properties used by Spring Boot.
+
+This Discovery Server by default is setup to run as a Standalone Server. To run as a Server Cluster refer to the [Spring Cloud documentation](http://projects.spring.io/spring-cloud/docs/1.0.3/spring-cloud.html#_high_availability_zones_and_regions).
 
 ### Examples for Overriding a Configuration in Spring Boot
 
