@@ -49,11 +49,11 @@ The [default configuration](discovery-server/src/main/resources/application.yml)
 
 #### Override a Configuration Using Program Arguments While Running as a JAR:
 
-+ `java -jar discovery-server-x.x.x-SNAPSHOT.jar --server.port=80 --spring.datasource.password=strongpassword`
++ `java -jar discovery-server-x.x.x-SNAPSHOT.jar --server.port=80`
 
 #### Override a Configuration Using Program Arguments While Running as a Docker Container:
 
-+ `docker run -d bhits/discovery-server:latest --server.port=80 --spring.datasource.password=strongpassword`
++ `docker run -d bhits/discovery-server:latest --server.port=80`
 
 + In a `docker-compose.yml`, this can be provided as:
 ```yml
@@ -62,7 +62,7 @@ services:
 ...
   discovery-server.c2s.com:
     image: "bhits/discovery-server:latest"
-    command: ["--server.port=80","--spring.datasource.password=strongpassword"]
+    command: ["--server.port=80"]
 ...
 ```
 *NOTE: Please note that these additional arguments will be appended to the default `ENTRYPOINT` specified in the `Dockerfile` unless the `ENTRYPOINT` is overridden.*
