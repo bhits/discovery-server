@@ -1,6 +1,6 @@
 # Discovery Server
 
-Discovery Service (Eureka from Netflix) is one of the key tenets of a microservice based architecture. In out current implementation of C2S, the Discovery Server is configured as a Standalone Server. It provides the following:
+The Discovery Server *([Eureka from Netflix OSS](https://github.com/Netflix/eureka))* is one of the key tenets of a microservice based architecture. It facilitates the Consent2Share (C2S) microservices to dynamically discover each other and promotes the scalability of C2S system. It provides the following:
 
  + Registry of Consent2Share (C2S) service instances,
  + Provides means for C2S service instances to register, de-register and query instances with the registry,
@@ -43,7 +43,7 @@ This API runs with some default configuration that is primarily targeted for dev
 
 Please see the [default configuration](discovery-server/src/main/resources/application.yml) for this API as a guidance and override the specific configuration per environment as needed. Also, please refer to [Spring Boot Externalized Configuration](http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html) documentation to see how Spring Boot applies the order to load the properties and [Spring Boot Common Properties](http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html) documentation to see the common properties used by Spring Boot.
 
-This Discovery Server by default is setup to run as a Standalone Server. To run as a Server Cluster refer to the [Spring Cloud documentation](http://projects.spring.io/spring-cloud/docs/1.0.3/spring-cloud.html#_high_availability_zones_and_regions).
+The [default configuration](discovery-server/src/main/resources/application.yml) provided with this Discovery Server is setup to run as a Standalone Discovery Server. To run as a Discovery Server Cluster in High Availability mode, please refer to the [Spring Cloud documentation](http://projects.spring.io/spring-cloud/docs/1.0.3/spring-cloud.html#_high_availability_zones_and_regions).
 
 ### Examples for Overriding a Configuration in Spring Boot
 
