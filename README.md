@@ -1,9 +1,9 @@
 # Discovery Server
 
-The Discovery Server *([Eureka from Netflix OSS](https://github.com/Netflix/eureka))* is one of the key tenets of a microservice based architecture. It facilitates the Consent2Share (C2S) microservices to dynamically discover each other and promotes the scalability of C2S system. It provides the following:
+The Discovery Server *([Eureka from Netflix OSS](https://github.com/Netflix/eureka))* is one of the key tenets of a microservice based architecture. It facilitates the Consent2Share (C2S) microservices to dynamically discover each other and promotes the scalability of the C2S system. It provides the following:
 
- + Registry of Consent2Share (C2S) service instances,
- + Provides means for C2S service instances to register, de-register and query instances with the registry,
+ + Registry of C2S service instances
+ + Provides means for C2S service instances to register, de-register and query instances with the registry
  + Registry propagation to other C2S microservice (Eureka client) and Discovery Server (Eureka server cluster) instances
 
 
@@ -31,11 +31,11 @@ To build the project, navigate to the folder that contains `pom.xml` file using 
 
 ### Commands
 
-This is a [Spring Boot](https://projects.spring.io/spring-boot/) project and serves the API via an embedded Tomcat instance, therefore there is no need for a separate application server to run this service.
+This is a [Spring Boot](https://projects.spring.io/spring-boot/) project and serves the API via an embedded Tomcat instance. Therefore, there is no need for a separate application server to run this service.
 + Run as a JAR file: `java -jar discovery-server-x.x.x-SNAPSHOT.jar <additional program arguments>`
 + Run as a Docker Container: `docker run -d bhits/discovery-server:latest <additional program arguments>`
 
-*NOTE: In order for this API to fully function as a microservice in C2S Application, it is also required to setup the dependency microservices and support level infrastructure. Please refer to the C2S Deployment Guide for instructions to setup the C2S infrastructure.*
+*NOTE: In order for this API to fully function as a microservice in the C2S application, it is required to setup the dependency microservices and support level infrastructure. Please refer to the C2S Deployment Guide for instructions to setup the C2S infrastructure.*
 
 ## Configure
 
@@ -97,7 +97,7 @@ services:
 
 Java has a default CA Certificates Store that allows it to trust well-known certificate authorities. For development and testing purposes, one might want to trust additional self-signed certificates. In order to override the default Java CA Certificates Store in a Docker container, one can mount a custom `cacerts` file over the default one in the Docker image as `docker run -d -v "/path/on/dockerhost/to/custom/cacerts:/etc/ssl/certs/java/cacerts" bhits/discovery-server:latest`
 
-*NOTE: The `cacerts` references given in the both sides of volume mapping above are files, not directories.*
+*NOTE: The `cacerts` references regarding volume mapping above are files, not directories.*
 
 [//]: # (## API Documentation)
 
