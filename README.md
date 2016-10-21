@@ -111,6 +111,6 @@ If you have any questions, comments, or concerns please see [Consent2Share](http
 
 ## Report Issues
 
-Please use [GitHub Issues](https://github.com/bhits/discovery-server-api/issues) page to report issues.
+Please use [GitHub Issues](https://github.com/bhits/discovery-server/issues) page to report issues.
 
 [//]: # (License)
