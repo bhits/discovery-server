@@ -75,7 +75,7 @@ Please see the [Docker installation documentation](https://docs.docker.com/engin
 
 # License
 
-View [license](https://github.com/bhits/discovery-server) information for the software contained in this image.
+View [license](https://github.com/bhits/discovery-server/blob/master/LICENSE) information for the software contained in this image.
 
 # User Feedback
 

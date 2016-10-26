@@ -35,7 +35,7 @@ This is a [Spring Boot](https://projects.spring.io/spring-boot/) project and ser
 + Run as a JAR file: `java -jar discovery-server-x.x.x-SNAPSHOT.jar <additional program arguments>`
 + Run as a Docker Container: `docker run -d bhits/discovery-server:latest <additional program arguments>`
 
-*NOTE: In order for this API to fully function as a microservice in the C2S application, it is required to setup the dependency microservices and support level infrastructure. Please refer to the C2S Deployment Guide for instructions to setup the C2S infrastructure.*
+*NOTE: In order for this API to fully function as a microservice in the C2S application, it is required to setup the dependency microservices and support level infrastructure. Please refer to the [C2S Deployment](https://github.com/bhits/consent2share/releases/download/2.0.0/c2s-deployment-guide.pdf) Guide for instructions to setup the C2S infrastructure.*
 
 ## Configure
 
