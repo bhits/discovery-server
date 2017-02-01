@@ -3,7 +3,7 @@ Discovery Server enables the Consent2Share microservices to dynamically discover
 
 # Full Description
 
-# Supported Tags and Respective `Dockerfile` Links
+# Supported Source Code Tags and Current `Dockerfile` Link
 
 [`0.10.0 (latest)`](https://github.com/bhits/discovery-server/releases/tag/0.10.0), [`0.8.0`](https://github.com/bhits/discovery-server/releases/tag/0.8.0)
 
