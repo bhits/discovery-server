@@ -3,9 +3,11 @@ Discovery Server enables the Consent2Share microservices to dynamically discover
 
 # Full Description
 
-# Supported Tags and Respective `Dockerfile` Links
+# Supported Source Code Tags and Current `Dockerfile` Link
 
-[`0.8.0`](https://github.com/bhits/discovery-server/blob/master/discovery-server/src/main/docker/Dockerfile),[`latest`](https://github.com/bhits/discovery-server/blob/master/discovery-server/src/main/docker/Dockerfile)[(0.8.0/Dockerfile)](https://github.com/bhits/discovery-server/blob/master/discovery-server/src/main/docker/Dockerfile)
+[`0.10.0 (latest)`](https://github.com/bhits/discovery-server/releases/tag/0.10.0), [`0.8.0`](https://github.com/bhits/discovery-server/releases/tag/0.8.0)
+
+[`Current Dockerfile`](https://github.com/bhits/discovery-server/blob/master/discovery-server/src/main/docker/Dockerfile)
 
 For more information about this image, the source code, and its history, please see the [GitHub repository](https://github.com/bhits/discovery-server).
 
@@ -26,7 +28,7 @@ Be sure to familiarize yourself with the repository's [README.md](https://github
 
 `docker run  --name discovery-server -d bhits/discovery-server:latest <additional program arguments>`
 
-*NOTE: In order for this API to fully function as a microservice in the Consent2Share application, it is required to setup the dependency microservices and support level infrastructure. Please refer to the [Consent2Share Deployment Guide](https://github.com/bhits/consent2share/releases/download/2.0.0/c2s-deployment-guide.pdf) for instructions to setup the Consent2Share infrastructure.*
+*NOTE: In order for this API to fully function as a microservice in the Consent2Share application, it is required to setup the dependency microservices and the support level infrastructure. Please refer to the Consent2Share Deployment Guide in the corresponding Consent2Share release (see [Consent2Share Releases Page](https://github.com/bhits/consent2share/releases)) for instructions to setup the Consent2Share infrastructure.*
 
 
 ## Configure
@@ -61,9 +63,9 @@ This environment variable is used to setup JVM argument, such as memory configur
 
 ### DEFAULT_PROGRAM_ARGS 
 
-This environment variable is used to setup application arugument. The default value of is "--spring.profiles.active=docker".
+This environment variable is used to setup an application argument. The default value is "--spring.profiles.active=application-default,docker".
 
-`docker run --name discovery-server -e DEFAULT_PROGRAM_ARGS="--spring.profiles.active=ssl,docker" -d bhits/discovery-server:latest`
+`docker run --name discovery-server -e DEFAULT_PROGRAM_ARGS="--spring.profiles.active=application-default,ssl,docker" -d bhits/discovery-server:latest`
 
 # Supported Docker versions
 
