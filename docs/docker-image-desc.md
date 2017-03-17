@@ -5,7 +5,7 @@ Discovery Server enables the Consent2Share microservices to dynamically discover
 
 # Supported Source Code Tags and Current `Dockerfile` Link
 
-[`0.10.0 (latest)`](https://github.com/bhits/discovery-server/releases/tag/0.10.0), [`0.8.0`](https://github.com/bhits/discovery-server/releases/tag/0.8.0)
+[`0.11.0 (latest)`](https://github.com/bhits/discovery-server/releases/tag/0.11.0)
 
 [`Current Dockerfile`](https://github.com/bhits/discovery-server/blob/master/discovery-server/src/main/docker/Dockerfile)
 
@@ -20,7 +20,6 @@ The Discovery Server ([Eureka from Netflix OSS](https://github.com/Netflix/eurek
 
 For more information and related downloads for Consent2Share, please visit [Consent2Share](https://bhits.github.io/consent2share/).
 # How to use this image
-
 
 ## Start a Discovery Server instance
 
@@ -69,7 +68,7 @@ This environment variable is used to setup an application argument. The default 
 
 # Supported Docker versions
 
-This image is officially supported on Docker version 1.12.1.
+This image is officially supported on Docker version 1.13.0.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 
