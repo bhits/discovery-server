@@ -1,3 +1,5 @@
 spring:
   application:
     name: discovery-server
+logstash:
+  destination: dockerhost:5000
